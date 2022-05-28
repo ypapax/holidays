@@ -9,10 +9,8 @@ import (
 
 func IsHoliday(countryCode string, d time.Time) (actualHolidayInCalendar, observedNonWorkingDay bool, h *cal.Holiday, finalErr error) {
 	var holidays []*cal.Holiday
-	switch countryCode {
-	case "us","en-us":
-		holidays = us.Holidays
-	default:
+	hh := ByCountryCode(countryCode)
+	if hh == nil {
 		finalErr = errors.Errorf("country code '%+v' is not supported", countryCode)
 		return
 	}
@@ -21,4 +19,13 @@ func IsHoliday(countryCode string, d time.Time) (actualHolidayInCalendar, observ
 	c.AddHoliday(holidays...)
 	actualHolidayInCalendar, observedNonWorkingDay, h = c.IsHoliday(d)
 	return actualHolidayInCalendar, observedNonWorkingDay, h, nil
+}
+
+func ByCountryCode(countryCode string) []*cal.Holiday {
+	switch countryCode {
+	case "us","en-us":
+		return us.Holidays
+	default:
+		return nil
+	}
 }
