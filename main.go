@@ -3,7 +3,6 @@ package holidays
 import (
 	"github.com/pkg/errors"
 	"github.com/rickar/cal/v2"
-	"github.com/rickar/cal/v2/ch"
 	"github.com/rickar/cal/v2/us"
 	"time"
 )
@@ -25,10 +24,6 @@ func ByCountryCode(countryCode string) []*cal.Holiday {
 	switch countryCode {
 	case "us","en-us":
 		return us.Holidays
-	case "ch":
-		return ch.Holidays
-
-
 	default:
 		return nil
 	}
