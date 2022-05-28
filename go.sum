@@ -1,0 +1,8 @@
+github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
+github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
+github.com/rickar/cal v2.1.3+incompatible h1:aMiY0A1HwkCgd3KP6ACC85qpzAj8CBw3JUkJgNVM6Q8=
+github.com/rickar/cal v2.1.3+incompatible/go.mod h1:3GBx8OBrvh4/y/JTxM0e1bUUIHMnqILl1rMANHWExxQ=
+github.com/rickar/cal/v2 v2.1.0 h1:J7Sy05SqtIrMws8lhJW3Lj2hm3CC4Yv3ro8pfmW00Ag=
+github.com/rickar/cal/v2 v2.1.0/go.mod h1:/fdlMcx7GjPlIBibMzOM9gMvDBsrK+mOtRXdTzUqV/A=
+github.com/rickar/cal/v2 v2.1.4 h1:haWE6rfVH0N0pVi/DkJVEJCnJW8L3ycXQQM4/o+Ny2M=
+github.com/rickar/cal/v2 v2.1.4/go.mod h1:/fdlMcx7GjPlIBibMzOM9gMvDBsrK+mOtRXdTzUqV/A=
