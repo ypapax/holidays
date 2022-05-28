@@ -4,6 +4,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/rickar/cal/v2"
 	"github.com/rickar/cal/v2/de"
+	"github.com/rickar/cal/v2/es"
 	"github.com/rickar/cal/v2/fr"
 	"github.com/rickar/cal/v2/gb"
 	"github.com/rickar/cal/v2/it"
@@ -36,6 +37,8 @@ func ByCountryCode(countryCode string) []*cal.Holiday {
 		return de.Holidays
 	case "en", "gb", "uk":
 		return gb.Holidays
+	case "es":
+		return es.Holidays
 	default:
 		return nil
 	}
