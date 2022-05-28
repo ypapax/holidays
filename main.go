@@ -8,7 +8,6 @@ import (
 )
 
 func IsHoliday(countryCode string, d time.Time) (actualHolidayInCalendar, observedNonWorkingDay bool, h *cal.Holiday, finalErr error) {
-	var holidays []*cal.Holiday
 	hh := ByCountryCode(countryCode)
 	if hh == nil {
 		finalErr = errors.Errorf("country code '%+v' is not supported", countryCode)
@@ -16,7 +15,7 @@ func IsHoliday(countryCode string, d time.Time) (actualHolidayInCalendar, observ
 	}
 	c := cal.NewBusinessCalendar()
 	// add holidays that the business observes
-	c.AddHoliday(holidays...)
+	c.AddHoliday(hh...)
 	actualHolidayInCalendar, observedNonWorkingDay, h = c.IsHoliday(d)
 	return actualHolidayInCalendar, observedNonWorkingDay, h, nil
 }
